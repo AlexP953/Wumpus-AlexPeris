@@ -1,0 +1,16 @@
+<div *ngIf="hero">
+    <div class="board">
+        <app-board [showAllValue]="showAllValue" [hero]="hero"></app-board>
+    </div>
+    <div class="controls-container">
+        <div class="feedback-message">
+            <p *ngFor="let message of feedbackMessages">
+                {{ message }}
+            </p>
+        </div>
+        <app-controls [currentDirection]="hero.orientation" [canExitEnter]="canExitEnter" [showAllValue]="showAllValue"
+            [numOfArrows]="hero.numOfArrows" (movementResponseEmmited)="receiveMovement($event)"
+            (showAllChange)="changeShowAll($event)">
+        </app-controls>
+    </div>
+</div>

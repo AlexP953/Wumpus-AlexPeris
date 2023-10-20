@@ -1,0 +1,23 @@
+<div *ngIf="board.length > 0" class="board">
+    <table>
+        <tr *ngFor="let row of board; let cellRow=index">
+            <td class="image-container" *ngFor="let cell of row; let cellCol=index">
+                <div>
+                    <img *ngIf="showMonster(cell, cellRow, cellCol)" class="image" src="assets/images/monster.png"
+                        alt="moster image">
+                    <img *ngIf="showWell(cell, cellRow, cellCol)" class="image" src="assets/images/well.png"
+                        alt="well image">
+
+                    <img *ngIf="showHero(cell)" [style.transform]="getRotation()" class="image image-hero" src="assets/images/archer.svg"
+                        alt="hero image">
+
+                    <img *ngIf="showGold(cell, cellRow, cellCol)" class="image" src="assets/images/gold.png"
+                        alt="gold image">
+                    <img *ngIf="showFootPrint(cell)" class="image image-footprint" src="assets/images/footprint.jpg"
+                        alt="footprint image">
+                </div>
+            </td>
+        </tr>
+    </table>
+     
+</div>

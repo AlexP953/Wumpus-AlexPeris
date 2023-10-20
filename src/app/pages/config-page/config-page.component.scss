@@ -1,0 +1,35 @@
+.full-height {
+    display: block;
+    height: 100vh;
+    
+}
+
+.title {
+    text-align: center;
+    margin: 20px;
+}
+
+.form-container {
+    padding: 20px 20px;
+    width: fit-content;
+    border-radius: 10px;
+    margin: 90px auto;
+}
+
+.label {
+    padding-bottom: 18.81px;
+}
+
+
+form{
+    div{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+    button.mat-focus-indicator.mat-raised-button.mat-button-base.mat-primary {
+        background-color: #6a9220;
+        width: 35%;
+        left: 30%;
+      }
+}

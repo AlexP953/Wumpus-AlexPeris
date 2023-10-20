@@ -1,0 +1,47 @@
+<div class="full-height">
+    <mat-card class="form-container">
+        <h1 class="title">Configuración inicial</h1>
+        <form [formGroup]="configForm" (ngSubmit)="sendForm()">
+            <div>
+                <mat-label class="label">Elige el tamaño del tablero</mat-label>
+                <mat-form-field appearance="outline">
+                    <mat-select formControlName="boardSize">
+                        <mat-option [value]="4">4</mat-option>
+                        <mat-option [value]="5">5</mat-option>
+                        <mat-option [value]="6">6</mat-option>
+                        <mat-option [value]="7">7</mat-option>
+                        <mat-option [value]="8">8</mat-option>
+                        <mat-option [value]="9">9</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+
+            <div>
+                <mat-label class="label">Elige el número de pozos</mat-label>
+                <mat-form-field appearance="outline">
+                    <mat-select formControlName="numOfWells">
+                        <mat-option [value]="1">1</mat-option>
+                        <mat-option [value]="2">2</mat-option>
+                        <mat-option [value]="3">3</mat-option>
+                        <mat-option [value]="4">4</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+
+            <div>
+                <mat-label class="label">Elige el número de flechas</mat-label>
+                <mat-form-field appearance="outline">
+                    <mat-select formControlName="numOfArrows">
+                        <mat-option [value]="1">1</mat-option>
+                        <mat-option [value]="2">2</mat-option>
+                        <mat-option [value]="3">3</mat-option>
+                        <mat-option [value]="4">4</mat-option>
+                        <mat-option [value]="5">5</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+
+            <button mat-raised-button color="primary" type="submit">Enviar</button>
+        </form>
+    </mat-card>
+</div>

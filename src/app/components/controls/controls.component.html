@@ -1,0 +1,39 @@
+<mat-toolbar >
+    <div class="border-right" >
+        <button mat-button color="accent" (click)="toggleShow()">
+            {{ showAllValue ? 'Ocultar' : 'Mostrar' }}
+        </button>
+    </div>
+
+    <button mat-icon-button>
+        <img src="../../../assets/images/ark.png" (click)="doAction('throwArrow')" matTooltip="Lanzar flecha">
+    </button>
+
+    <button [disabled]="!canExitEnter" mat-icon-button>
+        <mat-icon (click)="doAction('exitEnter')" matTooltip="Salir">
+            logout
+        </mat-icon>
+    </button>
+
+    <button mat-icon-button>
+        <mat-icon (click)="doAction('turnLeft')" matTooltip="Girar a la izquierda">
+            turn_left
+        </mat-icon>
+    </button>
+
+    <button mat-icon-button>
+        <mat-icon (click)="doAction('goForward')" matTooltip="Avanzar">
+            straight
+        </mat-icon>
+    </button>
+
+    <button mat-icon-button>
+        <mat-icon (click)="doAction('turnRight')" matTooltip="Girar a la derecha">
+            turn_right
+        </mat-icon>
+    </button>
+
+    <div class="num-of-harrows-bar">
+        Flechas: {{ numOfArrows }}
+    </div>
+</mat-toolbar>
